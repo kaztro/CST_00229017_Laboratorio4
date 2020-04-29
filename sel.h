@@ -86,7 +86,7 @@ Matrix createLocalK(int element,mesh &m){
 Vector createLocalb(int element,mesh &m){
     Vector b;
 
-    float PSI = m.getParameter(PSI_W), ETA = m.getParameter(ETA_N), N = m.getParameter(ELEMENT_LENGTH);
+    float PSI = m.getParameter(PSI_W), ETA = m.getParameter(ETA_N), l = m.getParameter(ELEMENT_LENGTH);
     
     b.push_back(PSI*l/2); 
     b.push_back(PSI*l/2); 
