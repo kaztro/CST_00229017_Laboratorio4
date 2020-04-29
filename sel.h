@@ -46,11 +46,11 @@ Matrix createLocalK(int element,mesh &m){
     zeroes(G,2);
     zeroes(I,2);
     createLocalA(A,m);
-    createLocalB(P,m);
+    createLocalP(P,m);
+    createLocalG(G,m);
+    createLocalQ(Q,m);
     createLocalC(G,m);
-    createLocalD(Q,m);
-    createLocalD(G,m);
-    createLocalD(I,m);
+    createLocalI(I,m);
 
     Vector row1, row2, row3, row4;
 
@@ -88,10 +88,10 @@ Vector createLocalb(int element,mesh &m){
 
     float PSI = m.getParameter(PSI_W), ETA = m.getParameter(ETA_N), N = m.getParameter(ELEMENT_LENGTH);
     
-    b.push_back(W*l/2); 
-    b.push_back(W*l/2); 
-    b.push_back(N*l/2); 
-    b.push_back(N*l/2);
+    b.push_back(PSI*l/2); 
+    b.push_back(PSI*l/2); 
+    b.push_back(ETA*l/2); 
+    b.push_back(ETA*l/2);
 
     return b;
 }
