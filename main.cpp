@@ -32,16 +32,10 @@ int main()
 
     //Solo se aplica Dirichlet, no habra condiciones de Neumann
     applyDirichlet(m,K,b);
-    
-    showMatrix(K);
-
-    zeroes(T,b.size());
-
-    calculate(K,b,T);
 
     cout << "La respuesta es: " << endl;
     
-    showVector(T);
+    showMatrix(K);
 
     return 0;
 }
