@@ -50,7 +50,7 @@ void correctConditions(int n,condition *list){
 void leerMallayCondiciones(mesh &m){
     char filename[14];
     ifstream file;
-    float l,u_bar,nu,rho,f;
+    float l, TAU, KAPPA, LAMBDA, IPSILON, PSI, ALPHA, DELTA, ETA;
     int nnodes,neltos,ndirich_u,ndirich_p;
 
     
@@ -64,11 +64,11 @@ void leerMallayCondiciones(mesh &m){
     }while(!file);
 
     
-    file >> l >> u_bar >> nu >> rho >> f;
+    file >> l >> TAU >> KAPPA >> LAMBDA >> IPSILON >> PSI >> ALPHA >> DELTA >> ETA;
     file >> nnodes >> neltos >> ndirich_u >> ndirich_p;
 
     
-    m.setParameters(l,u_bar,nu,rho,f);
+    m.setParameters(l, TAU, KAPPA, LAMBDA, IPSILON, PSI, ALPHA, DELTA, ETA);
     m.setSizes(nnodes,neltos,ndirich_u+ndirich_p);
     m.createData();
 
