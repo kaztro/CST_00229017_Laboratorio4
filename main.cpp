@@ -29,11 +29,7 @@ int main()
     zeroes(b,m.getSize(NODES)*2);
     ensamblaje(m,localKs,localbs,K,b);
     
-
-    //Solo se aplica Dirichlet, no habra condiciones de Neumann
     applyDirichlet(m,K,b);
-
-    cout << "La respuesta es: " << endl;
     
     showMatrix(K);
 
