@@ -1,6 +1,6 @@
 enum lines {NOLINE,SINGLELINE,DOUBLELINE};
 enum modes {NOMODE,INT_FLOAT,INT_INT_INT};
-enum parameters {ELEMENT_LENGTH, TAU_T, KAPPA_K, LAMBDA, IPSILON_U, PSI_W, ALPHA_A, DELTA_S, ETA_N};
+enum parameters {ELEMENT_LENGTH, TAU_T, KAPPA_K, LAMBDA_LA, IPSILON_U, PSI_W, ALPHA_A, DELTA_S, ETA_N};
 enum sizes {NODES,ELEMENTS,DIRICHLET};
 
 class item{
@@ -108,7 +108,7 @@ class mesh{
             parameters[ELEMENT_LENGTH]=l;
             parameters[TAU_T] = T;
             parameters[KAPPA_K] = K;
-            parameters[LAMBDA] = L;
+            parameters[LAMBDA_LA] = L;
             parameters[IPSILON_U] = U;
             parameters[PSI_W] = W;
             parameters[ALPHA_A] = ALFA;

@@ -11,7 +11,7 @@ void createLocalC(Matrix &C,mesh m){
 }
 
 void createLocalG(Matrix &G,mesh m){
-    float LAMBDA = m.getParameter(LAMBDA);
+    float LAMBDA = m.getParameter(LAMBDA_LA);
     G.at(0).at(0) += -LAMBDA/3;    G.at(0).at(1) += LAMBDA/3;
     G.at(1).at(0) += -LAMBDA/3;    G.at(1).at(1) += LAMBDA/3;
 }
