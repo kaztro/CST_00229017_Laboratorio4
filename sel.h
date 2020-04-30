@@ -43,13 +43,13 @@ Matrix createLocalK(int element,mesh &m){
     zeroes(P,2);
     zeroes(G,2);
     zeroes(Q,2);
-    zeroes(G,2);
+    zeroes(C,2);
     zeroes(I,2);
     createLocalA(A,m);
     createLocalP(P,m);
     createLocalG(G,m);
     createLocalQ(Q,m);
-    createLocalC(G,m);
+    createLocalC(C,m);
     createLocalI(I,m);
 
     Vector row1, row2, row3, row4;

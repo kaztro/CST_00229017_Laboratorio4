@@ -104,16 +104,16 @@ class mesh{
         element *element_list;
         condition *dirichlet_list;
     public:
-        void setParameters(float l, float T, float K, float L, float U, float W, float ALFA, float S, float N){
+        void setParameters(float l, float TAU, float KAPPA, float LAMBDA, float IPSILON, float PSI, float ALPHA, float DELTA, float ETA){
             parameters[ELEMENT_LENGTH]=l;
-            parameters[TAU_T] = T;
-            parameters[KAPPA_K] = K;
-            parameters[LAMBDA_LA] = L;
-            parameters[IPSILON_U] = U;
-            parameters[PSI_W] = W;
-            parameters[ALPHA_A] = ALFA;
-            parameters[DELTA_S] = S;
-            parameters[ETA_N] = N;
+            parameters[TAU_T] = TAU;
+            parameters[KAPPA_K] = KAPPA;
+            parameters[LAMBDA_LA] = LAMBDA;
+            parameters[IPSILON_U] = IPSILON;
+            parameters[PSI_W] = PSI;
+            parameters[ALPHA_A] = ALPHA;
+            parameters[DELTA_S] = DELTA;
+            parameters[ETA_N] = ETA;
         }
         void setSizes(int nnodes,int neltos,int ndirich){
             sizes[NODES] = nnodes;
